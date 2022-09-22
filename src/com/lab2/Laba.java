@@ -105,7 +105,7 @@ class UI implements menuEnum {
         case DELETE_HUMAN -> {
           out.println("Введите индекс человека в списке:");
           int index = inp.getInt();
-          if (index < 0 || (index - 1) >= humans.size()) {
+          if (index < 1 || (index - 1) >= humans.size()) {
             out.println("Некорректный индекс");
           } else {
             deleteHuman(index);
@@ -364,7 +364,7 @@ class UI implements menuEnum {
         default -> this.out.println("Некорректный ввод!");
       }
 
-    } while (choice != 7);
+    } while (choice != EXIT_TO_MENU);
 
   }
 

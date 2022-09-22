@@ -22,8 +22,7 @@ public class Inputer {
   public int getInt() {
     int res;
     try {
-      res = this.sc.nextInt();
-      this.sc.nextLine();
+      res = Integer.parseInt(this.sc.nextLine());
     } catch (Exception e) {
       res = -1;
     }
